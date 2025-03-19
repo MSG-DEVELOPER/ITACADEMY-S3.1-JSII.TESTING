@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "test:watch": "jest --watchAll --verbose=false"
+    "test:watch": "jest --watchAll --verbose=false",
+    "t" : "jest --watchAll --verbose=true"
   },
   "devDependencies": {
     "jest": "^29.2.2",
