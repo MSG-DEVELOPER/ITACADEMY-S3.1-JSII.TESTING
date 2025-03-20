@@ -50,10 +50,10 @@ function orderAlphabetically(array) {
 // Exercise 5: Order by year, ascending
 function orderByYear(array) {
   let arrayFinal = [];
-  let arrayYears = array.map(function(element) {
+  let arrayYears = array.map(function (element) {
     return element.year;
   });
-  arrayYears.sort(function(a, b) {
+  arrayYears.sort(function (a, b) {
     return a - b;
   });
 
@@ -61,12 +61,12 @@ function orderByYear(array) {
     let currentYear = arrayYears[i];
 
     // Agrupamos las películas del mismo año
-    let arrayConjunto = array.filter(function(element) {
+    let arrayConjunto = array.filter(function (element) {
       return element.year === currentYear;
     });
 
     // Ordenamos el grupo por título
-    arrayConjunto.sort(function(a, b) {
+    arrayConjunto.sort(function (a, b) {
       return a.title.localeCompare(b.title);
     });
 
@@ -84,9 +84,28 @@ function orderByYear(array) {
   return arrayFinal;
 }
 
-
 // Exercise 6: Calculate the average of the movies in a category
-function moviesAverageByCategory() {}
+function moviesAverageByCategory(array, cat) {
+  let i = 0;
+
+  let arrayByCat = array.filter(function (element) {
+    for (let i = 0; i < element.genre.length; i++) {
+      if (element.genre[i] == cat) {
+        return true;
+      }
+    }
+    return false;
+  });
+
+  let total = arrayByCat.reduce(function (acc, item) {
+    i++;
+    return (acc += item.score);
+  }, 0);
+
+  //let average=(total / i);
+
+  return parseFloat((total / i).toFixed(2));
+}
 
 // Exercise 7: Modify the duration of movies to minutes
 function hoursToMinutes() {}

@@ -10,6 +10,32 @@ const {
   bestFilmOfYear,
 } = require('../src/films');
 
+const moviesPrueva= [  
+  {
+  title: 'The Shawshank Redemption',
+  year: 1994,
+  director: 'Frank Darabont',
+  duration: '2h 22min',
+  genre: [ 'Miedo' , 'Drama'],
+  score: 10
+},  
+{
+  title: 'The Shawshank Redemption',
+  year: 1994,
+  director: 'Frank Darabont',
+  duration: '2h 22min',
+  genre: [ 'Drama'],
+  score: 8
+},  
+{
+  title: 'The Shawshank Redemption',
+  year: 1994,
+  director: 'Frank Darabont',
+  duration: '2h 22min',
+  genre: ['Crime' , 'fantasy'],
+  score: 9.3
+}]
+
 // Exercise 1
 describe('Function "getAllDirectors"', () => {
   it('should be declared', () => {
@@ -275,7 +301,7 @@ describe('Function "orderByYear"', () => {
     ).toEqual([{ year: 1982 }, { year: 1995 }, { year: 2002 }]);
   });
 
-  it('should order movies with the same year by their title, alphabetically', () => {
+  test('should order movies with the same year by their title, alphabetically', () => {
     expect(
       orderByYear([
         { title: 'abc', year: 2002 },
@@ -293,9 +319,17 @@ describe('Function "orderByYear"', () => {
 // Exercise 6
 // YOUR CODE HERE. Test moviesAverageByCategory()
 describe('Function "moviesAverageByCategory"', () => {
-  it('ADD YOUR CODE IN films.spec.js file', () => {
-    expect(typeof hoursToMinutes).toBe('coffee');
+  it('Should return a number which is the average ', () => {
+    expect(typeof moviesAverageByCategory).toBe('function');
   });
+
+  test('should return a number' , ()=>{
+    expect(typeof moviesAverageByCategory(movies,'Drama')).toBe('number');
+  })
+
+  test('should return the average score' , ()=>{
+    expect( moviesAverageByCategory(moviesPrueva,'Drama')).toBe(9);
+  })
 });
 
 // Exercise 7
