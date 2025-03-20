@@ -1,86 +1,119 @@
-# Sprint 3 IT Academy | Video management tool
+# ITACADEMY-S3.1-TESTING WITH JEST
 
-## Introduction
+# 🎨 Proyecto: Practica para entender los test y cómo realizarlos 
 
-A company in the audiovisual sector has asked us for a web application that will allow their employees to quickly find movies from a large database they have, since the process is currently done manually.
+## 📄 Descripción
 
-You will be in charge of setting up the core of the application: all the logic of filtering and sorting of movies. You have 2 weeks to finish, which is how long this sprint lasts.
+En este proyecto, nos sumergimos en el mundo de las pruebas unitarias (tests). El objetivo principal es implementar varias funciones de JavaScript que pasen una serie de tests predefinidos. Además, se requiere la creación de algunos tests personalizados.
 
-<br>
+## 🚀 Aprendizajes
+- Qué son los tests unitarios y cómo se utilizan en el desarrollo de software.
+- Uso de expect() y el matcher toBe() para realizar aserciones en los tests.
+- Implementación de funciones JavaScript que manipulan arrays utilizando métodos modernos de ES6 como map(), filter(), reduce() y sort().
 
-## Requirements
 
+## 💻 Tecnologías Utilizadas
 
-1. Clone this repo
-```bash
-$ git clone https://github.com/IT-Academy-BCN/starter-code-frontend-sprint-3-movies
-```
-
-2. Unlink your repo from the itacademy repository
-```bash
-$ git remote rm origin
-```
-
-3. Link your repo to the repository you have to create in your github account
-```bash
-$ git remote add origin <your repo name!>
-```
-
-<br>
-
-## Submission
-
-1. Upon completion, run the following commands:
-
-```bash
-$ git add .
-$ git commit -m "Sprint Solution"
-$ git push origin master
-```
-
-2. Create Pull Request.
-
-3. Upload the link to the virtual campus so that your mentor can correct it and give you feedback.
+- JavaScript(ES6)
+- Jest
+- Node.js
 
 
 
-<br>
+## 📋 Requisitos
 
-## Introduction
-
-The statement of the exercise is available on the virtual campus.
-
-<br>
-
-## Tests!
+- Dependencias: No se requieren dependencias adicionales para ejecutar este proyecto, solo es necesario tener Node.js y npm instalados en tu máquina.
+- Un navegador moderno para la visualización de los resultados en HTML generados por los tests.
 
 
-```shell
-$ npm install
-$ npm run test:watch
-```
+## 🛠️ Instalación
 
-And last, open the generated `test-results.html` file with the "Live Server" VSCode extension to see test results.
+1. Clona este repositorio
+> https://github.com/MSG-DEVELOPER/ITACADEMY-S3.1-JSII.TESTING.git
 
-Apart from the statement, you will know exactly what you are asked to do by looking at the file `tests/films.spec.js`, all tests are already defined here!
+2. Una vez dentro del directorio del proyecto, instala dependencias con
+> npm install
 
-<br>
+3. Para testerar las funciones , ejecute el script
+> npm run t
 
-## Instructions
+## 🧪 Pruebas
 
-You have the following indications from the frontend responsible:
+1. Los tests están definidos en el archivo tests/films.spec.js. Cada test ya está implementado, y mi objetivo fué implementar las funciones en src/films.js para que todos los tests pasen correctamente.
+2. Para ver los resultados de los tests en formato HTML, abre el archivo test-results.html con la extensión "Live Server" de VSCode.
 
-- It is mandatory to implement all loops in ES6 (using map, reduce, filter and sort to manipulate arrays).
 
-- As at the moment we don't consume data from a server using an API, we will work with data from the src/data.js archive. For the moment we will implement the logic using
-an array of information about 250 movies.
+## 🤝 Contribuciones
+¡Las contribuciones son bienvenidas! Para proponer mejoras:
 
-- The implementation is about processing this array of movies, to display it as requested in each exercise.
+Haz un fork del repositorio.
 
-- The logic to implement will be placed in the src/films.js file.
+Crea una nueva rama con tu mejora:
+git checkout -b feature/nueva-funcionalidad
 
-- You don't need to show the result of each function on the screen. Your goal is to pass the tests.  More information on how to program oriented to pass tests at the end of the document.
+Realiza los cambios y súbelos:
+git commit -m "Añadida nueva funcionalidad"
+git push origin feature/nueva-funcionalidad
 
-- Don't forget to include the capture of the test results in the virtual campus.
+Abre un Pull Request en GitHub.
+
+ ¡Gracias por visitar este proyecto!
+
+
+
+
+## 📄 Descripción
+
+Esta vez entramos en el mundo de los test. Completaremos unas funciones de JS para que pasen los test previamente echos por el equipo. También haremos nuestros propios test en un ejercicio concreto.
+
+## 🚀 Aprendizajes
+- Que son los test?
+- Concepto expect() y toBe()
+
+
+
+## 💻 Tecnologías Utilizadas
+
+- HTML5
+- CSS3
+- JavaScript(ES6)
+- Bootstrap
+- Jest
+- En mi caso tuve que instalar Babel
+
+
+
+## 📋 Requisitos
+
+No se requieren dependencias adicionales para ejecutar este proyecto. Solo necesitas un navegador web moderno (Chrome, Firefox, Edge, etc.).
+
+
+## 🛠️ Instalación
+
+1. Clona este repositorio
+> https://github.com/MSG-DEVELOPER/ITACADEMY-S3.1-JSII.TESTING.git
+
+2. Una vez dentro del directorio del proyecto, instala dependencias con
+> npm install
+
+3. Para testerar las funciones , ejecute el script
+> npm run t
+
+
+## 🤝 Contribuciones
+¡Las contribuciones son bienvenidas! Para proponer mejoras:
+
+Haz un fork del repositorio.
+
+Crea una nueva rama con tu mejora:
+git checkout -b feature/nueva-funcionalidad
+
+Realiza los cambios y súbelos:
+git commit -m "Añadida nueva funcionalidad"
+git push origin feature/nueva-funcionalidad
+
+Abre un Pull Request en GitHub.
+
+ ¡Gracias por visitar este proyecto!
 
 

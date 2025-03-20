@@ -108,7 +108,16 @@ function moviesAverageByCategory(array, cat) {
 }
 
 // Exercise 7: Modify the duration of movies to minutes
-function hoursToMinutes() {}
+function hoursToMinutes(array) {
+let modifiedArray = array.map(element=>{
+  
+})
+
+
+
+
+
+}
 
 // Exercise 8: Get the best film of a year
 function bestFilmOfYear() {}
