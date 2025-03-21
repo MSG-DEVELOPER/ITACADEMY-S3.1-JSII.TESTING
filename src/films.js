@@ -109,18 +109,48 @@ function moviesAverageByCategory(array, cat) {
 
 // Exercise 7: Modify the duration of movies to minutes
 function hoursToMinutes(array) {
-let modifiedArray = array.map(element=>{
-  
-})
+  let modifiedArray = array.map((element) => {
+    return { ...element, duration: calculaDurada(element.duration) };
+  });
+  return modifiedArray;
 
+  function calculaDurada(s) {
+    let hEnInt = extraeH(s);
+    let mEnInt = extraeM(s);
+    return hEnInt + mEnInt;
+  }
 
+  function extraeH(s) {
+    let h = s.indexOf('h');
+    let n = s[h - 1];
+    return parseInt(n) * 60;
+  }
 
-
-
+  function extraeM(s) {
+    //hay que comprobar si tiene valor de minutos
+    let m = s.indexOf('m');
+    if (m != -1) {
+      let totalM = 0;
+      totalM = parseInt(s[m - 1]);
+      if (s[m - 2] != ' ') {
+        totalM += parseInt(s[m - 2]) * 10;
+      }
+      return totalM;
+    } else {
+      return 0;
+    }
+  }
 }
 
 // Exercise 8: Get the best film of a year
-function bestFilmOfYear() {}
+function bestFilmOfYear(array, year) {
+  let movisByYear = array.filter((element) => element.year == year);
+
+  let movisByScore = movisByYear.sort((a, b) => b.score - a.score);
+  let winner = [movisByYear[0]];
+
+  return winner;
+}
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
