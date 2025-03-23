@@ -60,22 +60,18 @@ function orderByYear(array) {
   for (let i = 0; i < arrayYears.length; i++) {
     let currentYear = arrayYears[i];
 
-    // Agrupamos las películas del mismo año
     let arrayConjunto = array.filter(function (element) {
       return element.year === currentYear;
     });
 
-    // Ordenamos el grupo por título
     arrayConjunto.sort(function (a, b) {
       return a.title.localeCompare(b.title);
     });
 
-    // Añadimos cada película del grupo al array final
     for (let j = 0; j < arrayConjunto.length; j++) {
       arrayFinal.push(arrayConjunto[j]);
     }
 
-    // Saltamos los años duplicados
     while (i + 1 < arrayYears.length && arrayYears[i + 1] === currentYear) {
       i++;
     }
@@ -102,7 +98,6 @@ function moviesAverageByCategory(array, cat) {
     return (acc += item.score);
   }, 0);
 
-  //let average=(total / i);
 
   return parseFloat((total / i).toFixed(2));
 }
@@ -127,7 +122,6 @@ function hoursToMinutes(array) {
   }
 
   function extraeM(s) {
-    //hay que comprobar si tiene valor de minutos
     let m = s.indexOf('m');
     if (m != -1) {
       let totalM = 0;
@@ -147,7 +141,7 @@ function bestFilmOfYear(array, year) {
   let movisByYear = array.filter((element) => element.year == year);
 
   let movisByScore = movisByYear.sort((a, b) => b.score - a.score);
-  let winner = [movisByYear[0]];
+  let winner = [movisByScore[0]];
 
   return winner;
 }
